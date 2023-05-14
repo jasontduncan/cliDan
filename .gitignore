@@ -3,3 +3,4 @@
 node_modules
 .aimemory
 preambles/**
+.git_pat
