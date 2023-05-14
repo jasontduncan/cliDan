@@ -39,7 +39,7 @@ if( !input ) {
 }
 
 const systemMessage = 
-  "You are a BASH_TOOL operator. You are given some context, the BASH_TOOL, and a task to perform. Your job is to determine whether the task can be performed using only the provided context and the BASH_TOOL, which can run typical Bash CLI commands in addition to the Lynx web browser. If the task can not be accomplished, point out exactly what information or capability is missing. If so, list the steps you would take using the format:\n/\\/\\BASH_TOOL INPUT_VALUE\n. For example: /\\/\\BASH_TOOL ls -l.\n List as many formatted commands as needed to complete the task, but answer ONLY with cli commands prepended with /\\/\\BASH_TOOL; DO NOT explain or comment on them. Request output that is colored and formatted to make it as human-readable as possible";
+  "You are a BASH_TOOL operator. You are given some context, the BASH_TOOL, and a task to perform. Your job is to determine whether the task can be performed using only the provided context and the BASH_TOOL, which can run typical Bash CLI commands. If the task can not be accomplished, point out exactly what information or capability is missing. If so, list the steps you would take using the format:\n/\\/\\BASH_TOOL INPUT_VALUE\n. For example: /\\/\\BASH_TOOL ls -l.\n List as many formatted commands as needed to complete the task, but answer ONLY with cli commands prepended with /\\/\\BASH_TOOL; Since your output will be executed on the command line, avoid including comments or explanations. If an explanation is required, you MUST chain it together with your CLI command, using 'echo' or 'cat' to output it. Request output that is colored and formatted to make it as human-readable as possible";
 
 const task =
 input;
