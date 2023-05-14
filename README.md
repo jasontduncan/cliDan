@@ -6,8 +6,8 @@ This is a crazy little AI app and is intended for use ONLY by adventurous expert
 
 ##INSTALL
   - Create a `.env` file with:
-      - OPENAI_API_KEY=<YOUR KEY>
-      - OPENAI_API_ORG=<YOUR ORG ID>
+      - OPENAI_API_KEY=\<YOUR KEY>
+      - OPENAI_API_ORG=\<YOUR ORG ID>
   - `yarn install`
 
 ##Usage
