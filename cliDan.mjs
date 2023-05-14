@@ -14,19 +14,12 @@ import { exec }   from "child_process";
 const { v1: uuidv1 } = require('uuid')
 const { Configuration, OpenAIApi } = require( "openai" );
 const fs = require('fs')
-import { PineconeClient } from '@pinecone-database/pinecone';
 
 
-const BYTES_PER_PAGE = 3000 * 3; // 2000 tokens, 3 bytes per token
-const pinecone = new PineconeClient();
-
-await pinecone.init({
-  apiKey: process.env.PINECONE_API_KEY,
-  environment: process.env.PINECONE_ENVIRONMENT
-});
+const BYTES_PER_PAGE = 3000 * 3; // 2000 tokens, 3-ish bytes per token
 
 const config = new Configuration({
-  organization: "org-yBc4iN7okLnu85ptys534xRa",
+  organization: process.env.OPENAI_API_ORG,
   apiKey: process.env.OPENAI_API_KEY
 })
 
